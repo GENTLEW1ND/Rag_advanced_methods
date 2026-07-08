@@ -1,0 +1,25 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+requests
+numpy
+
+
+google-generativeai
+langchain-google-genai
+sentence-transformers
+
+
+qdrant-client      #Vector databse for semantic search
+
+
+unstructured        # Base library for DOCX/PPTX partitioning
+python-pptx         # Parser for Powerpoint files
+python-docx         # Parser for Word documents 
+pypdf               # Local PDF text extraction (replaces Document AI)
+beautifulsoup4      # High-speed HTML text extraction
+pdfplumber          # Fallback PDF parser for Scanned/complex layouts
+
+
+logfire[fastapi, requests]      #Pydatic logfire - traces the ingestion pipeline
+loguru                          # Enhanced logging for python
