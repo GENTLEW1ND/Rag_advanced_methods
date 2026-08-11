@@ -105,4 +105,4 @@ def embed_text(texts: list[str]) -> list[list[float]]:
         with logfire.span("Embed batch", model = _model_type, start=i, size=len(batch)):
             all_embeddings.extend(_embed_batch(batch))
             
-        return all_embeddings
+    return all_embeddings
