@@ -1,7 +1,7 @@
 from typing import TypedDict, List, Annotated
 import operator
 
-class AgentStage(TypedDict):
+class AgentState(TypedDict):
     # Using annotated with operator, add, and ensure the messages
     # are appended to the history rather than replaced.
     messages: Annotated[List[dict], operator.add]

@@ -1,5 +1,5 @@
 import logfire
-from app.agents.state import AgentStage
+from app.agents.state import AgentState
 from app.config import settings
 from langchain_groq import ChatGroq
 
@@ -7,7 +7,7 @@ from langchain_groq import ChatGroq
 # Direct Groq call - The LLM Gateway (Portkey routing/ fallback/ Caching) arrives in 
 llm = ChatGroq(api_key=settings.GROQ_API_KEY, model=settings.GROQ_MODEL, temperature = 0)
 
-def generate_node(state: AgentStage):
+def generate_node(state: AgentState):
     """
     Synthesizes a response using both Documentation Context AND Conversation History.
     Uses the native Portkey client (not LangChain) so we can read the

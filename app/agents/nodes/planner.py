@@ -1,4 +1,4 @@
-from app.agents.state import AgentStage
+from app.agents.state import AgentState
 from app.config import settings
 from langchain_groq import ChatGroq
 import logfire
@@ -7,7 +7,7 @@ import logfire
 llm = ChatGroq(api_key=settings.GROQ_API_KEY, model=settings.GROQ_MODEL, temperature = 0)
 
 
-def planner_node(state: AgentStage):
+def planner_node(state: AgentState):
     """
     The planner determines if a search is needed based on the Entire Conversation.
     """
